@@ -1,0 +1,1 @@
+pothole_interfaces/ImageCoordinate[] coordinates

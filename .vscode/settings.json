@@ -1,0 +1,27 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/build/uol_cmp9767_tutorial",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/install/uol_cmp9767_tutorial/lib/python3.10/site-packages",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/build/assignment_template",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/install/assignment_template/lib/python3.10/site-packages",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/build/voice_control",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/install/local/lib/python3.10/dist-packages",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/install/lib/python3.10/site-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/build/uol_cmp9767_tutorial",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/install/uol_cmp9767_tutorial/lib/python3.10/site-packages",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/build/assignment_template",
+    "/home/swin/ros2_workspaces/cmp9767_assignment_ws/install/assignment_template/lib/python3.10/site-packages",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/build/voice_control",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/install/local/lib/python3.10/dist-packages",
+    "/home/swin/ros2_workspaces/limo_ros2_ws/install/lib/python3.10/site-packages",
+    "/opt/ros/humble/lib/python3.10/site-packages",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages"
+  ],
+  "files.associations": {
+    "functional": "cpp"
+  }
+}
