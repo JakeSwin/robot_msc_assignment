@@ -1,4 +1,4 @@
-#include <memory>
+#include <memory> 
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
@@ -13,11 +13,13 @@
 #include "tf2/convert.h"
 #include "tf2_ros/transform_listener.h"
 #include <opencv2/opencv.hpp>
-#include <opencv2/imgproc/imgproc_c.h> // For cvFindContours, Faster Alternative
+#include <opencv2/imgproc/imgproc_c.h>
 #include <image_transport/image_transport.hpp>
 #include <image_geometry/pinhole_camera_model.h>
 #include <cv_bridge/cv_bridge.h>
 using std::placeholders::_1;
+
+// File not used in final version of code, used to illustrate a monolithic ros node design
 
 class MinimalSubscriber : public rclcpp::Node
 {

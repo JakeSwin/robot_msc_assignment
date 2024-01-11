@@ -26,6 +26,10 @@
 
 using std::placeholders::_1;
 
+// Node used to subscribe to depth image + tf and publish poses in odom frame for potholes. 
+// Works for both yolo detected potholes and cv detected potholes
+// C++ used for faster + more stable tf lookup and transform
+
 class FindPotholePoses : public rclcpp::Node
 {
   public:

@@ -26,15 +26,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'example_nav_to_pose = assignment_template.example_nav_to_pose:main',
-            'object_detector = assignment_template.object_detector:main',
-            'image_colour_filter = assignment_template.image_colour_filter:main',
-            'image_projection_3 = assignment_template.image_projection_3:main',
             'pothole_clustering = assignment_template.pothole_clustering:main',
             'yolo_pothole = assignment_template.yolo_pothole:main',
             'save_video = assignment_template.save_video:main',
-            'movement = assignment_template.movement:main',
-            'movement_2 = assignment_template.movement_2:main',
             'follow_path = assignment_template.follow_path:main',
         ],
     },

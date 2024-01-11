@@ -6,9 +6,7 @@
 import rclpy
 
 from geometry_msgs.msg import PoseStamped
-from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
-from nav_msgs.msg import Path
-# from tf_transformations import quaternion_from_euler
+from nav2_simple_commander.robot_navigator import BasicNavigator
 
 def main():
     rclpy.init()
@@ -28,7 +26,7 @@ def main():
     goal_pose_1 = PoseStamped()
     goal_pose_1.header.frame_id = 'map'
     goal_pose_1.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose_1.pose.position.x = 1.0
+    goal_pose_1.pose.position.x = 1.15
     goal_pose_1.pose.position.y = -0.05
     goal_pose_1.pose.orientation.z = 0.0
     goal_pose_1.pose.orientation.w = 1.0
@@ -52,7 +50,7 @@ def main():
     goal_pose_4 = PoseStamped()
     goal_pose_4.header.frame_id = 'map'
     goal_pose_4.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose_4.pose.position.x = -1.0
+    goal_pose_4.pose.position.x = -1.15
     goal_pose_4.pose.position.y = -0.9
     goal_pose_4.pose.orientation.z = 1.0
     goal_pose_4.pose.orientation.w = 0.0
@@ -73,49 +71,13 @@ def main():
     goal_pose_6.pose.orientation.z = 0.0
     goal_pose_6.pose.orientation.w = 1.0
 
-    # goal_pose_6 = PoseStamped()
-    # goal_pose_6.header.frame_id = 'map'
-    # goal_pose_6.header.stamp = navigator.get_clock().now().to_msg()
-    # goal_pose_6.pose.position.x = 0.0
-    # goal_pose_6.pose.position.y = -1.0
-    # goal_pose_6.pose.orientation.z = 0.0
-    # goal_pose_6.pose.orientation.w = 1.0
-
-    # goal_pose_7 = PoseStamped()
-    # goal_pose_7.header.frame_id = 'map'
-    # goal_pose_7.header.stamp = navigator.get_clock().now().to_msg()
-    # goal_pose_7.pose.position.x = 1.0
-    # goal_pose_7.pose.position.y = -0.9
-    # goal_pose_7.pose.orientation.z = 0.0
-    # goal_pose_7.pose.orientation.w = 1.0
-
-    # goal_pose_8 = PoseStamped()
-    # goal_pose_8.header.frame_id = 'map'
-    # goal_pose_8.header.stamp = navigator.get_clock().now().to_msg()
-    # goal_pose_8.pose.position.x = 1.0
-    # goal_pose_8.pose.position.y = -0.05
-    # goal_pose_8.pose.orientation.z = 1.0
-    # goal_pose_8.pose.orientation.w = 0.0
-
-    # goal_pose_9 = PoseStamped()
-    # goal_pose_9.header.frame_id = 'map'
-    # goal_pose_9.header.stamp = navigator.get_clock().now().to_msg()
-    # goal_pose_9.pose.position.x = -0.2
-    # goal_pose_9.pose.position.y = -0.1
-    # goal_pose_9.pose.orientation.z = 1.0
-    # goal_pose_9.pose.orientation.w = 0.0
-
     navigator.followWaypoints([
         goal_pose_1, 
         goal_pose_2, 
         goal_pose_3, 
         goal_pose_4, 
         goal_pose_5, 
-        goal_pose_6, 
-        # goal_pose_6, 
-        # goal_pose_7, 
-        # goal_pose_8, 
-        # goal_pose_9
+        goal_pose_6,
     ])
 
     while not navigator.isTaskComplete():

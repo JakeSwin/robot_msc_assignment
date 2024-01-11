@@ -26,12 +26,16 @@ find_package(pothole_interfaces REQUIRED)
 add_executable(image src/image.cpp)
 ament_target_dependencies(image rclcpp std_msgs sensor_msgs geometry_msgs cv_bridge image_transport image_geometry tf2 tf2_ros tf2_geometry_msgs OpenCV)
 
+add_executable(cv_find_pothole_xy src/cv_find_pothole_xy.cpp)
+ament_target_dependencies(cv_find_pothole_xy rclcpp std_msgs pothole_interfaces sensor_msgs geometry_msgs cv_bridge image_transport image_geometry tf2 tf2_ros tf2_geometry_msgs OpenCV)
+
 add_executable(find_pothole_poses src/find_pothole_poses.cpp)
 ament_target_dependencies(find_pothole_poses rclcpp std_msgs pothole_interfaces sensor_msgs geometry_msgs cv_bridge image_transport image_geometry tf2 tf2_ros tf2_geometry_msgs OpenCV)
 
 install(TARGETS
   image
   find_pothole_poses
+  cv_find_pothole_xy
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

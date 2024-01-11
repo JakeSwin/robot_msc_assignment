@@ -2,6 +2,7 @@
 # Resources Used: 
 #   - https://docs.ultralytics.com/modes/predict/
 
+import os
 import cv2
 import rclpy
 
@@ -25,7 +26,9 @@ class YoloPothole(Node):
         self.image_coordinate_publisher = self.create_publisher(ImageCoordinateArray, "/potholes_image_coordinate", 10)
 
         self.bridge = CvBridge()
-        self.model = YOLO("/home/swin/cmp9767_assignment_ws/src/assignment_template/assignment_template/best_custom_pothole_1.pt")
+        dir = os.path.dirname(__file__)
+        yolo_model_path = os.path.join(dir, '../yolo_models/best_custom_pothole_1.pt')
+        self.model = YOLO(yolo_model_path)
 
     def image_callback(self, data):
         try:

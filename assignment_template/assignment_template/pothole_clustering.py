@@ -1,5 +1,6 @@
 #!/bin/python3
 
+import os
 import rclpy
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,7 +53,9 @@ class PotholeClustering(Node):
         self.image = None
         self.clustering = Clusterer()
         plt.ion()
-        with cbook.get_sample_data("/home/swin/cmp9767_assignment_ws/src/assignment_template/models/potholes/materials/textures/background_potholes.png") as image_file:
+        dir = os.path.dirname(__file__)
+        potholes_image_path = os.path.join(dir, '../models/potholes/materials/textures/background_potholes.png')
+        with cbook.get_sample_data(potholes_image_path) as image_file:
             self.image = plt.imread(image_file)
 
         self.fig = plt.figure()
